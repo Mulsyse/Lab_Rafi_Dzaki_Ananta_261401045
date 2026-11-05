@@ -2,20 +2,16 @@ program fibonacci;
 uses crt;
 
 var
-  n, i, a, b, c: integer;
+  n: integer;
 
+procedure deretfibonacci(x: integer);
+var
+  i, a, b, c: integer;
 begin
-  clrscr;
-
-  write('Masukkan jumlah suku: ');
-  readln(n);
-
   a := 1;
   b := 1;
 
-  write('Deret Fibonacci: ');
-
-  for i := 1 to n do
+  for i := 1 to x do
   begin
     write(a, ' ');
 
@@ -23,6 +19,16 @@ begin
     a := b;
     b := c;
   end;
+end;
+
+begin
+  clrscr;
+
+  write('Masukkan jumlah suku: ');
+  readln(n);
+
+  write('Deret Fibonacci: ');
+  deretfibonacci(n);
 
   readln;
 end.
